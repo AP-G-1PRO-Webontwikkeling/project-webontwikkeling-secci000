@@ -1,0 +1,182 @@
+[
+    {
+        "id": 1,
+        "name": "NVIDIA GeForce RTX 3080",
+        "description": "De NVIDIA GeForce RTX 3080 is een krachtige grafische kaart die ontworpen is voor gaming en grafische intensieve taken.",
+        "price": 699,
+        "productionStatus": true,
+        "releaseDate": "2020-09-17",
+        "imageURL": "https://raw.githubusercontent.com/secci000/jsonimages/main/NVIDIA%20GeForce%20RTX%203080.jpg",
+        "status": "available",
+        "recommendedUsage": ["gaming", "3D rendering", "video editing"],
+        "manufacturerInfo": {
+            "id": "MANU-001",
+            "name": "NVIDIA",
+            "foundedYear": 1993,
+            "headquarters": "Santa Clara, California, United States",
+            "website": "https://www.nvidia.com"
+        }
+    },
+    {
+        "id": 2,
+        "name": "AMD Radeon RX 6800 XT",
+        "description": "De AMD Radeon RX 6800 XT biedt uitstekende prestaties voor gaming en professionele toepassingen.",
+        "price": 649,
+        "productionStatus": true,
+        "releaseDate": "2020-11-18",
+        "imageURL": "https://raw.githubusercontent.com/secci000/jsonimages/main/AMD%20Radeon%20RX%206800%20XT.jpg",
+        "status": "available",
+        "recommendedUsage": ["gaming", "graphic design", "machine learning"],
+        "manufacturerInfo": {
+            "id":"MANU-002",
+            "name": "AMD",
+            "foundedYear": 1969,
+            "headquarters": "Santa Clara, California, United States",
+            "website": "https://www.amd.com"
+        }
+    },
+    {
+        "id": 3,
+        "name": "NVIDIA GeForce RTX 3070",
+        "description": "De NVIDIA GeForce RTX 3070 is een krachtige grafische kaart die ontworpen is voor high-performance gaming.",
+        "price": 499,
+        "productionStatus": true,
+        "releaseDate": "2020-10-29",
+        "imageURL": "https://raw.githubusercontent.com/secci000/jsonimages/main/NVIDIA%20GeForce%20RTX%203070.jpg",
+        "status": "available",
+        "recommendedUsage": ["gaming", "content creation", "VR"],
+        "manufacturerInfo": {
+            "id": "MANU-003",
+            "name": "NVIDIA",
+            "foundedYear": 1993,
+            "headquarters": "Santa Clara, California, United States",
+            "website": "https://www.nvidia.com"
+        }
+    },
+    {
+        "id": 4,
+        "name": "AMD Radeon RX 6900 XT",
+        "description": "De AMD Radeon RX 6900 XT is een high-end grafische kaart geschikt voor 4K gaming en content creatie.",
+        "price": 999,
+        "productionStatus": true,
+        "releaseDate": "2020-12-08",
+        "imageURL": "https://raw.githubusercontent.com/secci000/jsonimages/main/AMD%20Radeon%20RX%206900%20XT.jpg",
+        "status": "available",
+        "recommendedUsage": ["gaming", "video editing", "deep learning"],
+        "manufacturerInfo": {
+            "id": "MANU-004",
+            "name": "AMD",
+            "foundedYear": 1969,
+            "headquarters": "Santa Clara, California, United States",
+            "website": "https://www.amd.com"
+        }
+    },
+    {
+        "id": 5,
+        "name": "NVIDIA GeForce RTX 3060 Ti",
+        "description": "De NVIDIA GeForce RTX 3060 Ti biedt uitstekende prestaties voor mainstream gaming.",
+        "price": 399,
+        "productionStatus": true,
+        "releaseDate": "2020-12-02",
+        "imageURL": "https://raw.githubusercontent.com/secci000/jsonimages/main/NVIDIA%20GeForce%20RTX%203060%20Ti.jpg",
+        "status": "available",
+        "recommendedUsage": ["gaming", "streaming", "casual gaming"],
+        "manufacturerInfo": {
+            "id": "MANU-005",
+            "name": "NVIDIA",
+            "foundedYear": 1993,
+            "headquarters": "Santa Clara, California, United States",
+            "website": "https://www.nvidia.com"
+        }
+    },
+    {
+        "id": 6,
+        "name": "AMD Radeon RX 6700 XT",
+        "description": "De AMD Radeon RX 6700 XT biedt geweldige prestaties voor 1440p gaming.",
+        "price": 479,
+        "productionStatus": true,
+        "releaseDate": "2021-03-18",
+        "imageURL": "https://raw.githubusercontent.com/secci000/jsonimages/main/AMD%20Radeon%20RX%206700%20XT.jpg",
+        "status": "available",
+        "recommendedUsage": ["gaming", "streaming", "graphic design"],
+        "manufacturerInfo": {
+            "id": "MANU-006",
+            "name": "AMD",
+            "foundedYear": 1969,
+            "headquarters": "Santa Clara, California, United States",
+            "website": "https://www.amd.com"
+        }
+    },
+    {
+        "id": 7,
+        "name": "NVIDIA GeForce RTX 3080 Ti",
+        "description": "De NVIDIA GeForce RTX 3080 Ti biedt extreme prestaties voor gaming en content creatie.",
+        "price": 1199,
+        "productionStatus": true,
+        "releaseDate": "2021-06-03",
+        "imageURL": "https://raw.githubusercontent.com/secci000/jsonimages/main/NVIDIA%20GeForce%20RTX%203080%20Ti.jpg",
+        "status": "available",
+        "recommendedUsage": ["gaming", "content creation", "VR"],
+        "manufacturerInfo": {
+            "id": "MANU-007",
+            "name": "NVIDIA",
+            "foundedYear": 1993,
+            "headquarters": "Santa Clara, California, United States",
+            "website": "https://www.nvidia.com"
+        }
+    },
+    {
+        "id": 8,
+        "name": "AMD Radeon RX 6600 XT",
+        "description": "De AMD Radeon RX 6600 XT biedt uitstekende prestaties voor 1080p gaming.",
+        "price": 379,
+        "productionStatus": true,
+        "releaseDate": "2021-08-11",
+        "imageURL": "https://raw.githubusercontent.com/secci000/jsonimages/main/AMD%20Radeon%20RX%206600%20XT.jpg",
+        "status": "available",
+        "recommendedUsage": ["gaming", "streaming", "casual gaming"],
+        "manufacturerInfo": {
+            "id": "MANU-008",
+            "name": "AMD",
+            "foundedYear": 1969,
+            "headquarters": "Santa Clara, California, United States",
+            "website": "https://www.amd.com"
+        }
+    },
+    {
+        "id": 9,
+        "name": "NVIDIA GeForce RTX 3050",
+        "description": "De NVIDIA GeForce RTX 3050 is een instapmodel grafische kaart geschikt voor casual gaming en multimedia-gebruik.",
+        "price": 249,
+        "productionStatus": true,
+        "releaseDate": "2022-01-13",
+        "imageURL": "https://raw.githubusercontent.com/secci000/jsonimages/main/NVIDIA%20GeForce%20RTX%203050.jpg",
+        "status": "available",
+        "recommendedUsage": ["casual gaming", "multimedia", "office tasks"],
+        "manufacturerInfo": {
+            "id": "MANU-009",
+            "name": "NVIDIA",
+            "foundedYear": 1993,
+            "headquarters": "Santa Clara, California, United States",
+            "website": "https://www.nvidia.com"
+        }
+    },
+    {
+        "id": 10,
+        "name": "AMD Radeon RX 6700",
+        "description": "De AMD Radeon RX 6700 is een betaalbare grafische kaart geschikt voor mainstream gaming en multimedia-gebruik.",
+        "price": 329,
+        "productionStatus": true,
+        "releaseDate": "2021-03-18",
+        "imageURL": "https://raw.githubusercontent.com/secci000/jsonimages/main/AMD%20Radeon%20RX%206700.jpg",
+        "manufacturer": "AMD",
+        "recommendedUsage": ["gaming", "multimedia", "office tasks"],
+        "manufacturerInfo": {
+            "id": "MANU-010",
+            "name": "AMD",
+            "foundedYear": 1969,
+            "headquarters": "Santa Clara, California, United States",
+            "website": "https://www.amd.com"
+        }
+    }
+]

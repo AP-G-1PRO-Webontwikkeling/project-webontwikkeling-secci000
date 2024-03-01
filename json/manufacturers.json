@@ -1,0 +1,16 @@
+[
+    {
+        "id": 301,
+        "name": "AMD",
+        "foundedYear": 1969,
+        "headquarters": "Santa Clara, California, United States",
+        "website": "https://www.amd.com"
+    },
+    {
+        "id": 302,
+        "name": "NVIDIA",
+        "foundedYear": 1993,
+        "headquarters": "Santa Clara, California, United States",
+        "website": "https://www.nvidia.com"
+    }
+]
