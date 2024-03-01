@@ -7,7 +7,35 @@ import { GraphicsCard } from '../gcInterfaces/gcInterfaces';
 const manufacturers = mfData;
 const graphicsCards: GraphicsCard[] = gcData;
 
-function main() {
+function displayGraphicsCard(graphicsCard: GraphicsCard): void {
+
+    console.log(` 
+     - id: ${graphicsCard.id}
+     - name: ${graphicsCard.name}
+     - description: ${graphicsCard.description}
+     - price: ${graphicsCard.price}`);
+
+    if (graphicsCard.productionStatus == true) {
+        console.log(`Still in production`);
+    }
+    else {
+        console.log(`Not in production anymore`);
+    }
+    console.log(`
+    - releasedate: ${graphicsCard.releaseDate}
+     - imageURL: ${graphicsCard.imageURL}
+     - recommended usage: ${graphicsCard.recommendedUsage}
+     - manufacturer: ${graphicsCard.manufacturer}
+        id: ${graphicsCard.manufacturerInfo.id}
+        name: ${graphicsCard.manufacturerInfo.name}
+        founded year: ${graphicsCard.manufacturerInfo.foundedYear}
+        headquarters: ${graphicsCard.manufacturerInfo.headquarters}
+        website: ${graphicsCard.manufacturerInfo.website}`);
+        
+
+}
+async function main() {
+    const response = await fetch()
     console.log(`1. View all data
     2. Filter by Id
     3. Exit`);
@@ -19,12 +47,13 @@ function main() {
             });
         }
         else if (index == 2) {
-            console.log(``);
+            let idInput: number = Number(readline.question(`Please enter the ID you want to filter by: `));
+            displayGraphicsCard(graphicsCards[idInput - 1]);
         }
         else if (index == 3) {
             console.log(``);
         }
+        index = Number(readline.question(`Please enter your choice: `));
     }
-    index = Number(readline.question(`Please enter your choice: `));
 }
 main();

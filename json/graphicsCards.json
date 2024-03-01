@@ -7,7 +7,7 @@
         "productionStatus": true,
         "releaseDate": "2020-09-17",
         "imageURL": "https://raw.githubusercontent.com/secci000/jsonimages/main/NVIDIA%20GeForce%20RTX%203080.jpg",
-        "status": "available",
+        "manufacturer": "NVIDIA",
         "recommendedUsage": ["gaming", "3D rendering", "video editing"],
         "manufacturerInfo": {
             "id": "MANU-001",
@@ -25,7 +25,7 @@
         "productionStatus": true,
         "releaseDate": "2020-11-18",
         "imageURL": "https://raw.githubusercontent.com/secci000/jsonimages/main/AMD%20Radeon%20RX%206800%20XT.jpg",
-        "status": "available",
+        "manufacturer": "AMD",
         "recommendedUsage": ["gaming", "graphic design", "machine learning"],
         "manufacturerInfo": {
             "id":"MANU-002",
@@ -43,7 +43,7 @@
         "productionStatus": true,
         "releaseDate": "2020-10-29",
         "imageURL": "https://raw.githubusercontent.com/secci000/jsonimages/main/NVIDIA%20GeForce%20RTX%203070.jpg",
-        "status": "available",
+        "manufacturer": "NVIDIA",
         "recommendedUsage": ["gaming", "content creation", "VR"],
         "manufacturerInfo": {
             "id": "MANU-003",
@@ -61,7 +61,7 @@
         "productionStatus": true,
         "releaseDate": "2020-12-08",
         "imageURL": "https://raw.githubusercontent.com/secci000/jsonimages/main/AMD%20Radeon%20RX%206900%20XT.jpg",
-        "status": "available",
+        "manufacturer": "AMD",
         "recommendedUsage": ["gaming", "video editing", "deep learning"],
         "manufacturerInfo": {
             "id": "MANU-004",
@@ -79,7 +79,7 @@
         "productionStatus": true,
         "releaseDate": "2020-12-02",
         "imageURL": "https://raw.githubusercontent.com/secci000/jsonimages/main/NVIDIA%20GeForce%20RTX%203060%20Ti.jpg",
-        "status": "available",
+        "manufacturer": "NVIDIA",
         "recommendedUsage": ["gaming", "streaming", "casual gaming"],
         "manufacturerInfo": {
             "id": "MANU-005",
@@ -97,7 +97,7 @@
         "productionStatus": true,
         "releaseDate": "2021-03-18",
         "imageURL": "https://raw.githubusercontent.com/secci000/jsonimages/main/AMD%20Radeon%20RX%206700%20XT.jpg",
-        "status": "available",
+        "manufacturer": "AMD",
         "recommendedUsage": ["gaming", "streaming", "graphic design"],
         "manufacturerInfo": {
             "id": "MANU-006",
@@ -115,7 +115,7 @@
         "productionStatus": true,
         "releaseDate": "2021-06-03",
         "imageURL": "https://raw.githubusercontent.com/secci000/jsonimages/main/NVIDIA%20GeForce%20RTX%203080%20Ti.jpg",
-        "status": "available",
+        "manufacturer": "NVIDIA",
         "recommendedUsage": ["gaming", "content creation", "VR"],
         "manufacturerInfo": {
             "id": "MANU-007",
@@ -133,7 +133,7 @@
         "productionStatus": true,
         "releaseDate": "2021-08-11",
         "imageURL": "https://raw.githubusercontent.com/secci000/jsonimages/main/AMD%20Radeon%20RX%206600%20XT.jpg",
-        "status": "available",
+        "manufacturer": "AMD",
         "recommendedUsage": ["gaming", "streaming", "casual gaming"],
         "manufacturerInfo": {
             "id": "MANU-008",
@@ -151,7 +151,7 @@
         "productionStatus": true,
         "releaseDate": "2022-01-13",
         "imageURL": "https://raw.githubusercontent.com/secci000/jsonimages/main/NVIDIA%20GeForce%20RTX%203050.jpg",
-        "status": "available",
+        "manufacturer": "NVIDIA",
         "recommendedUsage": ["casual gaming", "multimedia", "office tasks"],
         "manufacturerInfo": {
             "id": "MANU-009",
