@@ -5,7 +5,6 @@ import { GraphicsCard } from '../gcInterfaces/gcInterfaces';
 
 
 const manufacturers = mfData;
-const graphicsCards: GraphicsCard[] = gcData;
 
 function displayGraphicsCard(graphicsCard: GraphicsCard): void {
 
@@ -35,7 +34,8 @@ function displayGraphicsCard(graphicsCard: GraphicsCard): void {
 
 }
 async function main() {
-    const response = await fetch()
+    const response = await fetch("https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-secci000/main/json/graphicsCards.json?token=GHSAT0AAAAAACOXSJVK5QDYPNHLAYDAZ2AMZPBLDTQ")
+    const graphicsCards: GraphicsCard[] = await response.json();
     console.log(`1. View all data
     2. Filter by Id
     3. Exit`);
