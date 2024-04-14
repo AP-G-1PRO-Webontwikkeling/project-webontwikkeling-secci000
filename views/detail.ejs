@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphics Card Detail</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="detail-body">
+    <header id="detail-header">
+        <h1><%= card.name %></h1>
+    </header>
+    <main id="detail-main">
+        <section class="card-details">
+            <img src="<%= card.imageURL %>" alt="<%= card.name %>">
+            <p><strong>Description:</strong> <%= card.description %></p>
+            <p><strong>Price:</strong> $<%= card.price %></p>
+            <p><strong>Release Date:</strong> <%= card.releaseDate %></p>
+            <!-- Add more details as needed -->
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphics Cards Overview</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Graphics Cards Overview</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Graphics Cards</a></li>
+            <li><a href="#">Manufacturers</a></li>
+            <!-- Add more navigation links as needed -->
+        </ul>
+    </nav>
+    <main>
+        <input type="text" id="searchInput" placeholder="Search by name">
+        <table id="graphicsCardsTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Release Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Graphics cards data will be populated here dynamically -->
+                <% for (let card of graphicsCards) { %>
+                    <tr>
+                        <td><%= card.id %></td>
+                        <td><a href="/detail/<%= card.id %>"><%= card.name %></a></td>
+                        <td><%= card.description %></td>
+                        <td>$<%= card.price %></td>
+                        <td><%= card.releaseDate %></td>
+                    </tr>
+                <% } %>
+            </tbody>
+            
+        </table>
+    </main>
+</body>
+</html>
