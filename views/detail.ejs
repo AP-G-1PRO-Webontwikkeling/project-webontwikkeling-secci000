@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Graphics Card Detail</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <%- include("partials/head") %>
 <body id="detail-body">
     <header id="detail-header">
         <h1><%= card.name %></h1>
     </header>
+    <nav>
+        <ul>
+            <li><a href="/">Graphics Cards</a></li>
+            <li><a href="#">Manufacturers</a></li>
+            <!-- Add more navigation links as needed -->
+        </ul>
+    </nav>
     <main id="detail-main">
         <section class="card-details">
             <img src="<%= card.imageURL %>" alt="<%= card.name %>">
