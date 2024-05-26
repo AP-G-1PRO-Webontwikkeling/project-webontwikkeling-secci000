@@ -1,38 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include("partials/head") %>
+<%- include("partials/head") %>
 <body>
-    <header>
-        <h1>Graphics Cards Overview</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#">Graphics Cards</a></li>
-            <li><a href="/manufacturers">Manufacturers</a></li>
-            <!-- Add more navigation links as needed -->
-        </ul>
-    </nav>
+    <%- include("partials/header") %>
     <main>
         <form action="/" method="get">
             <select name="sortField">
                 <% for (let field of sortFields) { %>
-                    <option value="<%= field.value %>" <%= field.selected %>><%= field.text %></option> 
+                    <option value="<%= field.value %>" <%=field.selected %>><%= field.text %></option>
                 <% } %>
             </select>
             <select name="sortDirection">
                 <% for (let direction of sortDirections) { %>
-                    <option value="<%= direction.value %>" <%= direction.selected %>><%= direction.text %></option> 
+                    <option value="<%= direction.value %>" <%=direction.selected %>><%= direction.text %></option>
                 <% } %>
             </select>
+            <input type="text" id="searchInput" placeholder="Search by name" name="q" value="<%=q%>">
             <button type="submit">Sort</button>
         </form>
-        <input type="text" id="searchInput" placeholder="Search by name" name="searchTerm">
         <table>
             <thead>
                 <tr>
                     <% for (let field of sortFields) { %>
                         <th>
-                            <a href="?sortField=<%= field.value %>&sortDirection=<%= field.value === sortField ? sortDirection === 'asc' ? 'desc' : 'asc' : 'asc' %>">
+                            <a href="?sortField=<%= field.value %>&sortDirection=<%= field.value === sortField ? sortDirection === 'asc' ? 'desc' : 'asc' : 'asc' %>&q=<%= q %>">
                                 <%= field.text %>
                                 <% if (field.value === sortField) { %>
                                     <%- sortDirection === 'asc' ? '▲' : '▼' %>
@@ -46,9 +37,9 @@
                 <% for (let card of cards) { %>
                     <tr>
                         <td><a href="/detail/<%= card.id %>"><%= card.name %></a></td>
-                        <td><%- card.description%></td>
+                        <td><%- card.description %></td>
                         <td><%- card.price %></td>
-                        <td><%- card.releaseDate%></td>
+                        <td><%- card.releaseDate %></td>
                     </tr>
                 <% } %>
             </tbody>

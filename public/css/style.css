@@ -7,14 +7,12 @@ body {
 header {
     background-color: darkslategray;
     color: #fff;
-    padding: 20px;
+    padding: 1px;
     text-align: center;
 }
 
-nav {
-    background-color: slategray;
-    padding: 10px 0;
-    text-align: center;
+main {
+    padding: 5px 10px 5px 10px;
 }
 
 nav ul {
@@ -28,9 +26,6 @@ nav ul li {
     text-decoration: none;
 }
 
-main {
-    padding: 20px;
-}
 
 table {
     width: 100%;
@@ -47,12 +42,43 @@ table td {
 table th {
     background-color: #f2f2f2;
 }
-/*asdsad*/
+
 #detail-body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
-img{
-    max-width: 300px;
+
+img {
+    max-width: 400px;
 }
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+nav a {
+    color: white;
+}
+
+a:hover {
+    opacity: 60%;
+}
+/*detail.ejs*/
+h1{
+    text-align: center;
+    margin-top: 0;
+}
+.card-details, .manufacturer-details{
+    width: 400px;
+    margin: auto;
+    border: 2px solid orange;
+    padding: 20px;
+}
+.card-details img , .manufacturer-details img{
+    display: flex;
+    margin: auto;
+}
+.card-details p, .manufacturer-details p{
+text-align: justify;}

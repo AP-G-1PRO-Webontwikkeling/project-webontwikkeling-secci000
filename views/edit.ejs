@@ -1,0 +1,18 @@
+<!-- edit.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("partials/head") %>
+
+<body>
+    <%- include("partials/header") %>
+    <h1>Edit Graphics Card</h1>
+    <form action="/update/<%= card._id %>" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="<%= card.name %>"><br>
+
+        <!-- Add other fields you want to edit here -->
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

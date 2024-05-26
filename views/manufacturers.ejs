@@ -1,44 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include("partials/head") %>
-
-    <body>
-        <header>
-            <h1>Graphics Cards Overview</h1>
-        </header>
-        <nav>
-            <ul>
-                <li><a href="/">Graphics Cards</a></li>
-                <li><a href="#">Manufacturers</a></li>
-                <!-- Add more navigation links as needed -->
-            </ul>
-        </nav>
-        <main>
-            <table id="graphicsCardsTable">
-                <thead>
+<body>
+    <%- include("partials/header") %>
+    <main>
+        <table id="manufacturersTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Founded Year</th>
+                    <th>Headquarters</th>
+                    <th>Website</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for (let manufacturer of manufacturers) { %>
                     <tr>
-                        <th>ID</th>
-                        <th>Name</th>
-                        <th>Founded Year</th>
-                        <th>Headquarters</th>
-                        <th>Website</th>
+                        <td><%= manufacturer.id %></td>
+                        <td><a href="/manufacturer/<%= manufacturer.id %>"><%= manufacturer.name %></a></td>
+                        <td><%= manufacturer.foundedYear %></td>
+                        <td><%= manufacturer.headquarters %></td>
+                        <td><a href="<%= manufacturer.website %>"><%= manufacturer.website %></a></td>
                     </tr>
-                </thead>
-                <tbody>
-                    <!-- Graphics cards data will be populated here dynamically -->
-                    <% for (let manufacturer of manufacturers) { %>
-                        <tr>
-                            <td><%= manufacturer.id %></td>
-                            <td><%= manufacturer.name %></a></td>
-                            <td><%= manufacturer.foundedYear %></td>
-                            <td><%= manufacturer.headquarters %></td>
-                            <td><%= manufacturer.website %></td>
-                        </tr>
-                    <% } %>
-                </tbody>
-                
-            </table>
-        </main>
-    </body>
-
+                <% } %>
+            </tbody>
+        </table>
+    </main>
+</body>
 </html>

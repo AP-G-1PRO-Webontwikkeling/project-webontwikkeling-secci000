@@ -2,23 +2,17 @@
 <html lang="en">
     <%- include("partials/head") %>
 <body id="detail-body">
-    <header id="detail-header">
-        <h1><%= card.name %></h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="/">Graphics Cards</a></li>
-            <li><a href="#">Manufacturers</a></li>
-            <!-- Add more navigation links as needed -->
-        </ul>
-    </nav>
+    <%- include("partials/header") %>
     <main id="detail-main">
         <section class="card-details">
+            <h1><%=card.name%></h1>
             <img src="<%= card.imageURL %>" alt="<%= card.name %>">
             <p><strong>Description:</strong> <%= card.description %></p>
             <p><strong>Price:</strong> $<%= card.price %></p>
-            <p><strong>Release Date:</strong> <%= card.releaseDate %></p>
-            <!-- Add more details as needed -->
+            <p><strong>Production status:</strong> <%= card.productionStatus %></p>
+            <p><strong>Manufacturer:</strong> <%= card.manufacturer %></p>
+            <p><strong>Recommended usage:</strong> <%= card.recommendedUsage %></p>
+            <p><strong>Release date:</strong> <%= card.releaseDate %></p>
         </section>
     </main>
 </body>

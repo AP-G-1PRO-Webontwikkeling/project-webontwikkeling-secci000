@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("partials/head") %>
+<body>
+    <%- include("partials/header") %>
+    <main id="manufacturer-detail-main">
+        <section class="manufacturer-details">
+            <h1><%= manufacturer.name %></h1>
+            <img src="<%= manufacturer.imageURL %>" alt="<%= manufacturer.name %>">
+            <p><strong>Founded Year:</strong> <%= manufacturer.foundedYear %></p>
+            <p><strong>Headquarters:</strong> <%= manufacturer.headquarters %></p>
+            <p><strong>Website:</strong> <a href="<%= manufacturer.website %>"><%= manufacturer.website %></a></p>
+        </section>
+    </main>
+</body>
+</html>

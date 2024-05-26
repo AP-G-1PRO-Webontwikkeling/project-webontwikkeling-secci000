@@ -4,13 +4,15 @@
         "name": "AMD",
         "foundedYear": 1969,
         "headquarters": "Santa Clara, California, United States",
-        "website": "https://www.amd.com"
+        "website": "https://www.amd.com",
+        "imageURL": "https://raw.githubusercontent.com/secci000/jsonimages/main/amd-symbol.jpg"
     },
     {
         "id": 302,
         "name": "NVIDIA",
         "foundedYear": 1993,
         "headquarters": "Santa Clara, California, United States",
-        "website": "https://www.nvidia.com"
+        "website": "https://www.nvidia.com",
+        "imageURL": "https://raw.githubusercontent.com/secci000/jsonimages/main/nvidia.jpg"
     }
 ]
