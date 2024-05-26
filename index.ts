@@ -1,4 +1,5 @@
-import express from "express";
+import express, { Express } from "express";
+//import express from "express";
 import { Collection, MongoClient, ObjectId } from "mongodb";
 import path from "path";
 import session from "./session";
@@ -8,21 +9,26 @@ import { secureMiddleware } from "./middleware/secureMiddleware";
 import { flashMiddleware } from "./middleware/flashMiddleware";
 import { homeRouter } from "./routers/homeRouter";
 import { loginRouter } from "./routers/loginRouter";
-
+dotenv.config();
 const uri = "mongodb+srv://matthewwan:matthewwan@cluster0.ocj6det.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 const client = new MongoClient(uri);
-const app = express();
+//const app = express();
 const collection: Collection<GraphicsCard> = client.db("gcAndManu").collection<GraphicsCard>("graphicsCards");
 
-app.use(express.static("public"));
-app.use(session)
-app.use(flashMiddleware);
-app.use(express.json());
+const app : Express = express();
+
 app.set("view engine", "ejs");
+app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, "public")));
+app.use(session);
+app.use(flashMiddleware);
 app.set('views', path.join(__dirname, "views"));
-//app.set("port", 3000);
+
 app.set("port", process.env.PORT || 3000);
+
+app.use("/", loginRouter());
+app.use("/", secureMiddleware, homeRouter());
 
 interface GraphicsCard {
     id: number;
@@ -90,8 +96,6 @@ async function loadData() {
         manufacturers = await client.db("gcAndManu").collection("manufacturers").find<Manufacturer>({}).toArray();
     }
 }
-app.use("/", loginRouter());
-app.use("/", secureMiddleware, homeRouter());
 
 app.get("/cards", (req, res) => {
     const sortField = typeof req.query.sortField === "string" ? req.query.sortField : "name";

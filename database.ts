@@ -1,26 +1,14 @@
 import dotenv from "dotenv";
 dotenv.config();
 import { MongoClient } from "mongodb";
+import { User } from "./types";
 import bcrypt from "bcrypt";
-import { ObjectId } from "mongodb";
 
 export const MONGODB_URI = process.env.MONGODB_URI ?? "mongodb://localhost:27017";
 
 export const client = new MongoClient(MONGODB_URI);
 
 export const userCollection = client.db("login-express").collection<User>("users");
-
-interface User {
-    _id?: ObjectId;
-    email: string;
-    password?: string;
-    role: "ADMIN" | "USER";
-}
-
-interface FlashMessage {
-    type: "error" | "success" | "info"
-    message: string;
-}
 
 const saltRounds : number = 10;
 
