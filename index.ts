@@ -2,9 +2,9 @@ import express, { Express } from "express";
 //import express from "express";
 import { Collection, MongoClient, ObjectId } from "mongodb";
 import path from "path";
-import session from "./session";
 import dotenv from "dotenv";
-import {connect} from "./database";
+import {connect, GraphicsCard, Manufacturer} from "./database";
+import session from "./session";
 import { secureMiddleware } from "./middleware/secureMiddleware";
 import { flashMiddleware } from "./middleware/flashMiddleware";
 import { homeRouter } from "./routers/homeRouter";
@@ -29,35 +29,6 @@ app.set("port", process.env.PORT || 3000);
 
 app.use("/", loginRouter());
 app.use("/", secureMiddleware, homeRouter());
-
-interface GraphicsCard {
-    id: number;
-    name: string;
-    description: string;
-    price: number;
-    productionStatus: boolean;
-    releaseDate: string;
-    imageURL: string;
-    manufacturer: string;
-    recommendedUsage: string[];
-    manufacturerInfo: {
-        id: string;
-        name: string;
-        foundedYear: number;
-        headquarters: string;
-        website: string;
-        imageURL: string;
-    };
-}
-
-interface Manufacturer {
-    id: number;
-    name: string;
-    foundedYear: number;
-    headquarters: string;
-    website: string;
-    imageURL: string;
-}
 
 let cards: GraphicsCard[] = [];
 let manufacturers: Manufacturer[] = [];
@@ -175,10 +146,6 @@ async function UpdateCard(id: ObjectId, card: Partial<GraphicsCard>) {
     return updateResult;
 }
 
-app.get("/login", async (req, res) => {
-
-    res.render("login");
-});
 
 app.get("/cards/:id/edit", async (req, res) => {
     let id: number = parseInt(req.params.id);
@@ -187,7 +154,6 @@ app.get("/cards/:id/edit", async (req, res) => {
         card: card
     });
 });
-
 app.post("/cards/:id/edit", async (req, res) => {
     try {
         const id = new ObjectId(req.params.id);
@@ -214,7 +180,7 @@ app.post("/cards/:id/edit", async (req, res) => {
         if (updateResult.matchedCount === 0) {
             res.status(404).send('Card not found');
         } else {
-            res.redirect("/");
+            res.redirect("/cards");
         }
     } catch (error) {
         res.status(500).send('Internal Server Error');
@@ -224,7 +190,7 @@ app.post("/cards/:id/edit", async (req, res) => {
 
 
 app.listen(app.get("port"), async () => {
-    await client.connect();
+    //await client.connect();
     await loadData();
     try {
         await connect();
@@ -233,5 +199,5 @@ app.listen(app.get("port"), async () => {
         console.error(error);
         process.exit(1);
     }
-    console.log("[server] http://localhost:" + app.get("port"));
+    //console.log("[server] http://localhost:" + app.get("port"));
 });

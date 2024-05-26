@@ -10,6 +10,34 @@ export const client = new MongoClient(MONGODB_URI);
 
 export const userCollection = client.db("login-express").collection<User>("users");
 
+export interface GraphicsCard {
+    id: number;
+    name: string;
+    description: string;
+    price: number;
+    productionStatus: boolean;
+    releaseDate: string;
+    imageURL: string;
+    manufacturer: string;
+    recommendedUsage: string[];
+    manufacturerInfo: {
+        id: string;
+        name: string;
+        foundedYear: number;
+        headquarters: string;
+        website: string;
+        imageURL: string;
+    };
+}
+
+export interface Manufacturer {
+    id: number;
+    name: string;
+    foundedYear: number;
+    headquarters: string;
+    website: string;
+    imageURL: string;
+}
 const saltRounds : number = 10;
 
 async function exit() {
