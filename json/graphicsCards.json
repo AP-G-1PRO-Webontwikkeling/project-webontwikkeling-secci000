@@ -188,24 +188,5 @@
             "website": "https://www.amd.com",
             "imageURL": "https://raw.githubusercontent.com/secci000/jsonimages/main/amd-symbol.jpg"
         }
-    },
-    {
-        "id": 11,
-        "name": "AMD Radeon RX 6700",
-        "description": "De AMD Radeon RX 6700 is een betaalbare grafische kaart geschikt voor mainstream gaming en multimedia-gebruik.",
-        "price": 329,
-        "productionStatus": true,
-        "releaseDate": "2021-03-18",
-        "imageURL": "https://raw.githubusercontent.com/secci000/jsonimages/main/AMD%20Radeon%20RX%206700.jpg",
-        "manufacturer": "AMD",
-        "recommendedUsage": ["gaming", "multimedia", "office tasks"],
-        "manufacturerInfo": {
-            "id": "MANU-010",
-            "name": "AMD",
-            "foundedYear": 1969,
-            "headquarters": "Santa Clara, California, United States",
-            "website": "https://www.amd.com",
-            "imageURL": "https://raw.githubusercontent.com/secci000/jsonimages/main/amd-symbol.jpg"
-        }
     }
 ]

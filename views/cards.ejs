@@ -40,6 +40,7 @@
                         <td><%- card.description %></td>
                         <td><%- card.price %></td>
                         <td><%- card.releaseDate %></td>
+                        <td><a href="/cards/<%= card.id %>/edit"><button type="button">Edit</button></a></td>
                     </tr>
                 <% } %>
             </tbody>
